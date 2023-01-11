@@ -224,12 +224,18 @@ img {
 }
 
 .navegacion__enlace {
-    color: #595959;
+    color: var(--colorGrisMedio);
     /*margin-right: 3rem;*/
     font-size: 1.8rem;
     transition: all 0.3s ease;
 }
 
+/*
+.navegacion__enlace:hover {
+    color: var(--colorComplemento);
+}
+*/
+.navegacion__enlace--activo,
 .navegacion__enlace:hover {
     color: var(--colorComplemento);
 }
