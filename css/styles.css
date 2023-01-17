@@ -375,23 +375,22 @@ img {
     top: 0;
     left: 0;
     display: none;
+    z-index: 1000000;
 }
 
-.modal__content {
+.modal-content {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-.modal__img {
-    width: 100%;
-}
+.modal-img {}
 
-.modal__boton {
+.modal-boton {
     position: absolute;
     background-color: var(--colorRojo);
-    top: 11.5rem;
+    top: 0rem;
     right: 0rem;
     cursor: pointer;
     width: 3.8rem;

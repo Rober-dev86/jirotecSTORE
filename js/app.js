@@ -79,25 +79,30 @@ $("ul").click(function (propagacion) {
     propagacion.stopPropagation();
 });
 
-/*
-let images = document.querySelectorAll('.producto__img');//obtiene todas la imagenes de producto
-let modal = document.querySelector('#modal');
-let img = document.querySelector('#modal__img');
-let boton = document.querySelector('#modal__boton');
 
-for (let i = 0; i < images.length; i++) {
-  images[i].addEventListener('click', function (e) {
-    modal.classList.toggle("modal-open");
-    let src = e.target.src;
-    img.setAttribute("src", src);
-  });
-}
+// VENTANA MODAL
+// Obtener todas las imágenes de la sección producto
+var productImages = document.querySelectorAll('.product-image');
+var boton = document.getElementById('modal-boton');
 
-boton.addEventListener('click', function () {
-  modal.classList.toggle("modal-open");
+// Añadir un evento de clic a cada imagen de la sección producto
+productImages.forEach(function (image) {
+    image.addEventListener('click', function () {
+        // Obtener la ruta de la imagen grande correspondiente
+        var modalImg = this.getAttribute('data-modal-img');
+        // Establecer la ruta de la imagen grande en la ventana modal
+        document.getElementById('modal-img').src = modalImg;
+        //Mostrar la ventana modal
+        modal.classList.toggle("modal-open");
+    });
 });
 
-*/
+//Añadir un evento de clic al botón de cierre de la ventana modal
+boton.addEventListener('click', function () {
+    modal.classList.toggle("modal-open");
+});
+
+
 
 
 
